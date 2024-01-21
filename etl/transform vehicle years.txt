@@ -1,0 +1,13 @@
+import pandas as pd
+import datetime
+# Assuming 'CarRentalData1.xlsx' is the path to your Excel file
+excel_file = 'CarRentalData1.xlsx'
+# Read data from the "vehicle" sheet into a DataFrame
+df = pd.read_excel(excel_file, sheet_name='vehicles')
+# Calculate the difference between the current year (2024) and the vehicle year
+df['car.numberyears'] = 2024 - df['vehicle.year']
+# Write the modified DataFrame back to the Excel file
+df.to_excel(excel_file, sheet_name='vehicles', index=False)
+print(df)
+#  Display the updated DataFrame
+print(f"The Excel file '{excel_file}' has been updated with modifications.")

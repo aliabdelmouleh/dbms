@@ -1,0 +1,16 @@
+import pandas as pd
+
+# Assuming 'ratings_output.json' is the path to your JSON file
+json_file = 'ratings_output.json'
+
+# Read data from the JSON file into a DataFrame
+df = pd.read_json(json_file)
+
+# Assuming 'output_excel_file.xlsx' is the path to the output Excel file
+excel_file = 'ratings.xlsx'
+
+# Write the DataFrame to an Excel file
+df.to_excel(excel_file, index=False)
+
+# Display a message indicating the conversion
+print(f"The JSON file '{json_file}' has been converted to Excel: '{excel_file}'.")

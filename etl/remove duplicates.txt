@@ -1,0 +1,50 @@
+import pandas as pd
+#remove from customer 
+excel_file = 'customer.xlsx'
+
+df = pd.read_excel(excel_file)
+
+# Remove duplicates based on the "customer_id" column
+df_no_duplicates = df.drop_duplicates(subset='customer_id', keep='first')
+
+# Write the DataFrame with duplicates removed back to the same Excel file
+df_no_duplicates.to_excel(excel_file, index=False)
+
+# Display a message indicating the removal of duplicates
+print(f"Duplicates based on 'customer_id' have been removed from the Excel file '{excel_file}'.")
+
+
+#remove from vehicle 
+
+
+
+excel_file = 'vehicle.xlsx'
+
+df = pd.read_excel(excel_file)
+
+# Remove duplicates based on the "vehicle.id" column
+df_no_duplicates = df.drop_duplicates(subset='vehicle.id', keep='first')
+
+# Write the DataFrame with duplicates removed back to the same Excel file
+df_no_duplicates.to_excel(excel_file, index=False)
+
+# Display a message indicating the removal of duplicates
+print(f"Duplicates based on 'customer_id' have been removed from the Excel file '{excel_file}'.")
+
+
+
+#remove from ratings 
+
+excel_file = 'ratings.xlsx'
+
+df = pd.read_excel(excel_file)
+
+# Remove duplicates based on the "vehicle.id" column
+df_no_duplicates = df.drop_duplicates(subset='vehicle.id', keep='first')
+
+# Write the DataFrame with duplicates removed back to the same Excel file
+df_no_duplicates.to_excel(excel_file, index=False)
+
+# Display a message indicating the removal of duplicates
+print(f"Duplicates based on 'customer_id' have been removed from the Excel file '{excel_file}'.")
+

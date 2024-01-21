@@ -1,0 +1,37 @@
+import pandas as pd
+
+# reduce data for customer 
+excel_file = 'customer.xlsx'
+
+df = pd.read_excel(excel_file)
+
+df_reduced = df.head(2000)
+
+df_reduced.to_excel(excel_file, index=False)
+
+print(f"The Excel file '{excel_file}' has been reduced to 2000 records.")
+
+# reduce data for ratings 
+excel_file = 'ratings.xlsx'
+
+df = pd.read_excel(excel_file)
+
+df_reduced = df.head(150)
+
+df_reduced.to_excel(excel_file, index=False)
+
+print(f"The Excel file '{excel_file}' has been reduced to 2000 records.")
+
+
+# reduce data for vehicle
+excel_file = 'vehicle.xlsx'
+
+df = pd.read_excel(excel_file)
+
+df_reduced = df.head(150)
+
+df_reduced.to_excel(excel_file, index=False)
+
+print(f"The Excel file '{excel_file}' has been reduced to 2000 records.")
+
+
